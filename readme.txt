@@ -6,11 +6,13 @@
 
 **把文件添加到git仓库**
 
-​		--git add <文件>
+​		--git add <文件>	//把工作区要提交的修改添加到暂存区（stage）
 
 ​				--git add readme.txt	(例子)
 
-​		--git commit -m <message>
+​				--git add .	//简化
+
+​		--git commit -m <message>	//把暂存区的所有内容提交当前分支（master）
 
 ​				--git add -m “这是第一次提交”
 
@@ -48,12 +50,32 @@
 
 **在进行git操作，如git log，如果不正常退出（CTRL+C），会出现看不到输入，只看见光标闪烁的情况**
 
-git操作中正常退出是q
+​	git操作中正常退出是q
 
 ​		reset重置Git Bash
 
 ​		关闭Git Bash重新打开
 
-​	
+**工作区和暂存区**
 
-​	
+​		工作区-->当前文件夹看到的目录
+
+​		.git文件夹-->git版本库
+
+​				版本库中最重要的是暂存区（Stage或者叫Index）和git自动创建的第一个分支master，以及指向master的一个指针HEAD
+
+​		{工作区} ---add---> {{stage}---commit--->{master}}
+
+​		工作区修改的内容用git add .指令提交到stage(暂存区)
+
+​		stage(暂存区)的所有内容用git commit -m <message>指令提交到当前分支master
+
+**管理修改**
+
+​		第一次修改 -->git add -->git commit -->修改成功提交
+
+​		第一次修改 --> git add --> 第二次修改 --> git commit --> 第一次修改成功提交，第二次修改提交失败
+
+​				-- 没有把修改提交到暂存区的内容是不会提交到当前分支master的
+
+​		第一次修改 --> git add --> 第二次修改 --> git add --> git commit -->两次修改成功提交
