@@ -86,6 +86,26 @@
 
 ​				--git restore <file>	//丢弃工作区的改动
 
-​		修改了工作区的内容，提交到stage（暂存区），想要取消暂存
+​		修改了工作区的内容，并提交到stage（暂存区），想要取消暂存
 
 ​				--git restore -- staged <file>	//取消暂存
+
+**删除文件**
+
+​		如果在文件管理器中删除了文件，或者用rem删除
+
+​				--rem <file>
+
+​		git会知道哪些文件被删除，现在有两个选择
+
+​				从版本库中删除这个文件，并且commit
+
+​						--git rm <file>
+
+​						--git commit -m <message>
+
+​				恢复删除了的文件
+
+​						--git restore
+
+​				
