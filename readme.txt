@@ -130,3 +130,11 @@
 
 ​		--git push origin master
 
+## 从远程仓库克隆
+
+​	创建一个新的仓库test
+
+​	用指令克隆一个本地库
+
+​		--git clone git@server-name:path/repo-name.git
+
