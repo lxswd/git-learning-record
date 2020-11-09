@@ -94,17 +94,17 @@
 
 ​		如果在文件管理器中删除了文件，或者用rem删除
 
-​				--rem <file>
+​				--rm <file>
 
 ​		git会知道哪些文件被删除，现在有两个选择
 
-​				从版本库中删除这个文件，并且commit
+​				确实要删，从版本库中删除这个文件，并且commit
 
 ​						--git rm <file>
 
 ​						--git commit -m <message>
 
-​				恢复删除了的文件
+​				误删，恢复删除了的文件
 
 ​						--git restore <file>
 
