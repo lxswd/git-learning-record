@@ -106,6 +106,6 @@
 
 ​				恢复删除了的文件
 
-​						--git restore
+​						--git restore <file>
 
 ​				
