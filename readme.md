@@ -174,6 +174,16 @@
 
 ​	--git log --graph --pretty=oneline --abbrev-commit	//简化分支合并图
 
-修改
+## 分支管理策略
 
-ssssss
+​	通常，分支合并时会使用fast forward模式，这种情况下合并分支，会丢失分支信息，如果强制禁用fast forward，git会在merge时
+
+​	生成一个新的commit，这样就可以在分支历史上看到分支信息	
+
+​	分支合并时，加上--on-ff参数，就可以普通模式合并分支，可以看到曾经做过合并
+
+​	--git merge --on-ff -m <message> <branch>
+
+​	--git log --graph --pretty=oneline --abbrev-commit	//查看历史信息
+
+​	
