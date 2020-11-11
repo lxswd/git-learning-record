@@ -108,6 +108,14 @@
 
 ​			--git restore <file>
 
+### 	删除远程已经推送过的文件
+
+​		--git rm -r --cached <file>
+
+​		--git commit -m <message>
+
+​		--git push
+
 ## 创建SHH Key
 
 ​	window下打开git bash
@@ -152,3 +160,4 @@
 
 ​	--git branch -d <name>	//删除指定分支
 
+## 
