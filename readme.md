@@ -148,15 +148,16 @@
 
 ## 创建与合并分支
 
-​		--git branch	//查看分支
+​	--git branch	//查看分支
 
-​		--git branch <name>	//创建分支
+​	--git branch <name>	//创建分支
 
-​		--git checkout <name> || git switch <name>	//切换分支
+​	--git checkout <name> || git switch <name>	//切换分支
 
-​		--git checkout -b <name> || git switch -c <name>	//创建并切换分支
+​	--git checkout -b <name> || git switch -c <name>	//创建并切换分支
 
-​		--git merge <name>	//合并指定分支到当前分支
+​	--git merge <name>	//合并指定分支到当前分支
 
-​		--git branch -d <name>	//删除指定分支
+​	--git branch -d <name>	//删除指定分支
 
+修改
