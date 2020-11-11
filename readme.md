@@ -160,11 +160,17 @@
 
 ​	--git branch -d <name>	//删除指定分支
 
-修改再修改
+## 解决冲突
 
-修改修改
+​	当分支无法自动合并时，先解决冲突，再提交，合并完成
 
-是第二个修改
+​		创建切换到分支a  -> 修改 -> git add -> git commit -> 
 
-这是一个修改
+​		回到master分支 -> 修改 -> git add -> git commit -> git merge a(发生冲突，无法合并) ->
+
+​		解决冲突 -> git add -> git commit (成功合并)
+
+​	--git log --graph	//查看分支合并图
+
+​	--git log --graph --pretty=oneline --obbrev-commit	//简化分支合并图
 
