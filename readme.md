@@ -172,6 +172,6 @@
 
 ​	--git log --graph	//查看分支合并图
 
-​	--git log --graph --pretty=oneline --obbrev-commit	//简化分支合并图
+​	--git log --graph --pretty=oneline --abbrev-commit	//简化分支合并图
 
 修改
