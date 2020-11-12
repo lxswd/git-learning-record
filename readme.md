@@ -264,7 +264,11 @@
 
 ​		如果git pull提示no tracking information，则说明本地分支没有与远程分支建立链接
 
+## reabase
 
+​	reabase操作可以把本地未push的分叉提交整理成直线
+
+​	reabase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比
 
 
 
