@@ -270,9 +270,37 @@
 
 ​	reabase的目的是使得我们在查看历史提交的变化时更容易，因为分叉的提交需要三方对比
 
+## 管理标签
 
+### 	创建标签
 
+​		--git tag <tag-name>	// 创建一个标签
 
+​		--git tag	//列出所有标签
+
+​		--git tag <tag-name> <commit-id>	//为指定的commit打一个标签
+
+​		--git tag -a <tag-name> -m <message> <commit-id>	//为指定的commit打一个标签，并为添加的tag加上描述
+
+​		--git show <tag-name>	//查看tag的说明文字
+
+### 	标签操作
+
+​		--git tag -d <tag-name>	//删除指定标签
+
+​		--git tag origin <tag-name>	//推送指定标签到远程
+
+​		--git tag origin --tags	//推送所有标签到远程
+
+#### 		删除已经推送到远程的标签
+
+​			先删除本地的标签
+
+​				--git tag -d <tag-name>
+
+​			再从远程删除
+
+​				--git push origin :refs/tags/<tag-name>
 
 
 
