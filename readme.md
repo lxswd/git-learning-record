@@ -186,6 +186,61 @@
 
 ​	--git log --graph --pretty=oneline --abbrev-commit	//查看历史信息
 
-​	
+## Bug分支
 
-bug修改
+​	在分支dev工作时，工作区的改动还未提交，这时发现之前的内容有bug，需要修改
+
+​		--git stash	//保存当前的工作内容
+
+​	用git status查看工作区，是干净的，可以切换到master创建分支修改bug
+
+​		--git switch -c issue
+
+​	修改完成后切换到master分支，完成合并，切换到dev继续工作
+
+​		--git stash list	// 查看当前stash存了几个
+
+​		--git stash pop	// 切恢复之前存起来的工作内容，并删除stash
+
+​		--git stash apply stash@{0}	// stash可以有多个，恢复指定stash，stash用stash@{}标记
+
+​		--git stash drop	// 删除stash
+
+​	master分支上的bug修复完成，但是dev也是由master分离出来的，master有的bug，dev也有，切换到dev分支
+
+​		--git cherry-pick <commit>	// 把修复bug提交的commit复制到dev上，commit是master修复bug提交的commit_id
+
+​	修复bug也可以直接从dev分支上开始，注意要先保存现场，然后再切换分支进行bug的修复，修改好后，把修复bug的commit复制到master分支上
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
