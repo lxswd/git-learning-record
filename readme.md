@@ -218,7 +218,51 @@
 
 ​		--git branch -D <branch>	//删除还未合并过的分支
 
+## 多人协作
 
+​	--git remote	//查看远程库的信息，默认是origin
+
+​	--git remote -v	//查看远程库的详细信息，显示远程抓取和推送origin的地址，如果没有推送权限，就看不到push地址
+
+### 	推送分支
+
+​		推送时，指定本地分支
+
+​			--git push origin master
+
+​		也可以推送其他分支
+
+​			--git push origin dev
+
+​		不是所有的分支都需要推送
+
+​			master分支是主分支是要推送的
+
+​			dev分支是进行开发的分支，也要推送
+
+​			bug分支在本地修改bug，是不需要的
+
+​			feature分支看情况，是否需要合作开发
+
+### 	抓取分支
+
+​		多人协作时，大家会在master和dev上推送各自的修改
+
+​		现在从远程库克隆，只能看到master分支，想要在dev上开发，必须创建远程origin的dev到本地
+
+​			--git switch -c <branch-name> origin/dev
+
+​		如果一个人已经给远程分支dev推送了修改，另一人再推送时，会提交失败，因为有冲突
+
+​		这时候需要用git pull把最新的从origin/dev抓取下来，本地合并，解决冲突，再推送
+
+​			--git pull 
+
+​		如果git pull失败，原因是本地dev分支没有与远程origin/dev分支建立链接，根据设置dev和origin/dev的链接
+
+​			--git branch --set-upsteam-to <branch-name> origin/<branch-name>	//本地dev分支与远程origin/dev建立链接
+
+​		如果git pull提示no tracking information，则说明本地分支没有与远程分支建立链接
 
 
 
