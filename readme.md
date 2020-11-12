@@ -186,4 +186,6 @@
 
 ​	--git log --graph --pretty=oneline --abbrev-commit	//查看历史信息
 
-​	修改
+改
+
+bug修改
